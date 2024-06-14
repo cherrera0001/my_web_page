@@ -4,26 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cristóbal Herrera - Ethical Hacker y Docente</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .custom-footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            background: #e4e4e4;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #007BFF;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Cristóbal Herrera</h1>
-            <p>Ethical Hacker y Docente</p>
-            <nav>
-                <a href="index.html">Inicio</a>
-                <a href="proyectos.html">Proyectos</a>
-                <a href="contacto.html">Contacto</a>
-            </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Cristóbal Herrera</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="proyectos.html">Proyectos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                </li>
+            </ul>
         </div>
-    </header>
-    <div class="container main">
-        <section class="bio">
+    </nav>
+
+    <div class="container">
+        <div class="jumbotron mt-4">
+            <h1 class="display-4">¡Hola, soy Cristóbal Herrera!</h1>
+            <p class="lead">Ethical Hacker y Docente con más de 18 años de experiencia.</p>
+            <hr class="my-4">
+            <p>Bienvenido a mi sitio web profesional.</p>
+        </div>
+
+        <section class="bio mb-5">
             <h2>Sobre mí</h2>
             <p>Soy Cristóbal Herrera con más de 18 años de experiencia laboral en el ámbito de la ciberseguridad. Tengo un Diplomado en Gobernanza, Gestión y Auditoría de Ciberseguridad, y habilidades en Red Team. He trabajado en diversos sectores como gobierno, banca, retail, y más. Actualmente me desempeño como Hacker Ético en Falabella.</p>
         </section>
-        <section class="experience">
+
+        <section class="experience mb-5">
             <h2>Experiencia</h2>
             <h3>Falabella</h3>
             <p><strong>Ethical Hacker</strong><br>
@@ -36,7 +90,8 @@
             Febrero 2021 - Octubre 2021</p>
             <!-- Puedes añadir más experiencias según tu CV -->
         </section>
-        <section class="skills">
+
+        <section class="skills mb-5">
             <h2>Habilidades</h2>
             <ul>
                 <li>Auditorías Internas</li>
@@ -45,15 +100,24 @@
                 <!-- Añade más habilidades según tu CV -->
             </ul>
         </section>
-        <section class="contact">
+
+        <section class="contact mb-5">
             <h2>Contacto</h2>
-            <p>Email: <a href="mailto:herrera.jara.cristobal@gmail.com">herrera.jara.cristobal@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/cherrera0001">Cristóbal Herrera</a></p>
-            <p>GitHub: <a href="https://github.com/cherrera0001">cherrera0001</a></p>
+            <p>Puedes contactarme a través de los siguientes medios:</p>
+            <ul>
+                <li>Email: <a href="mailto:herrera.jara.cristobal@gmail.com">herrera.jara.cristobal@gmail.com</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/cherrera0001">Cristóbal Herrera</a></li>
+                <li>GitHub: <a href="https://github.com/cherrera0001">cherrera0001</a></li>
+            </ul>
         </section>
     </div>
-    <footer>
+
+    <footer class="custom-footer">
         <p>&copy; 2024 Cristóbal Herrera. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
