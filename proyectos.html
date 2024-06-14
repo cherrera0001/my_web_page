@@ -4,29 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyectos - Cristóbal Herrera</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Proyectos</h1>
-            <nav>
-                <a href="index.html">Inicio</a>
-                <a href="proyectos.html">Proyectos</a>
-                <a href="contacto.html">Contacto</a>
-            </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Cristóbal Herrera</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="proyectos.html">Proyectos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                </li>
+            </ul>
         </div>
-    </header>
-    <div class="container main">
-        <section>
+    </nav>
+
+    <div class="container">
+        <div class="jumbotron mt-4">
+            <h1 class="display-4">Proyectos</h1>
+            <p class="lead">Aquí puedes ver algunos de mis proyectos recientes y seminarios en los que he participado.</p>
+        </div>
+
+        <section class="projects mb-5">
             <h2>Mis Proyectos</h2>
-            <!-- Aquí puedes listar tus proyectos -->
-            <p>Cyber Security For All</p>
-            <p>Conferencias: </p>
-        </section>
-    </div>
-    <footer>
-        <p>&copy; 2024 Cristóbal Herrera. Todos los derechos reservados.</p>
-    </footer>
-</body>
-</html>
+            <ul>
+                <li><strong>Proyecto 1:</strong> Descripción del proyecto 1. <a href="https://www.youtube.com/watch?v=video1">Ver video</a></li>
+                <li><strong>Proyecto 2:</strong> Descripción del proyecto 2. <a href="https://www.youtube.com/watch
