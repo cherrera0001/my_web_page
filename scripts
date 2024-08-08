@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Scripts</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Scripts Python</h1>
+        <p>En este repositorio iré dejando diversos script que pueden ser de utilidad de todos.</p>
+    </header>
+    <main>
+        <section>
+            <h2>FaviconFrenzy.py</h2>
+            <p>FaviconFrenzy es un script en Python diseñado para buscar el favicon de una URL proporcionada, calcular su hash y enviarlo a shodan para su análisis. Además, el script puede descubrir la dirección IP real detrás de servicios de protección como Cloudflare.</p>
+            <h3>Descripción:</h3>
+            <ul>
+                <li>Obtiene el favicon de una URL proporcionada y calcula su hash utilizando mmh3.</li>
+                <li>Utiliza el hash del favicon para buscar en Shodan posibles coincidencias y obtener información detallada sobre los servidores que usan el mismo favicon.</li>
+                <li>Intenta resolver la dirección IP real del dominio, incluso si está protegido por servicios como Cloudflare.</li>
+            </ul>
+            <h3>Parámetros</h3>
+            <ul>
+                <li><code>-u, --url</code> (requerido): URL para buscar el FavIcon.</li>
+                <li><code>-ak, --addshodankey</code>: Almacena o reemplaza la clave Shodan en el archivo de configuración.</li>
+                <li><code>-t, --topresults</code>: Número máximo de resultados a mostrar de Shodan (por defecto es 10).</li>
+            </ul>
+            <h3>Necesario antes de usar:</h3>
+            <pre><code>pip install requests beautifulsoup4 pillow mmh3 shodan dnspython</code></pre>
+            <h3>Ejemplo de Uso:</h3>
+            <pre><code>python3 faviconfrenzy.py -u https://ejemplo.com -ak TU_CLAVE_SHODAN</code></pre>
+            <h3>Requisitos:</h3>
+            <pre><code>pip install requests mmh3 shodan dnspython</code></pre>
+            <h3>Notas:</h3>
+            <ul>
+                <li>Asegúrate de tener una clave API de Shodan válida.</li>
+                <li>El script intenta resolver la IP real del dominio utilizando consultas DNS, lo cual puede no siempre ser exitoso dependiendo de las configuraciones del DNS y servicios de protección como Cloudflare.</li>
+            </ul>
+        </section>
+        
+        <!-- Repite la estructura anterior para cada script -->
+
+        <section>
+            <h2>domainSecurityScan.py</h2>
+            <p>Este script realiza un análisis completo de seguridad para un dominio especificado. Las funcionalidades clave incluyen:</p>
+            <ul>
+                <li>Utiliza crt.sh y SecurityTrails para obtener una lista de subdominios del dominio proporcionado.</li>
+                <li>Busca información en Shodan sobre los subdominios, como direcciones IP, puertos abiertos y otros datos relevantes.</li>
+                <li>Intenta resolver la IP real de los subdominios para detectar la IP original detrás de servicios de protección como Cloudflare.</li>
+                <li>Escanea los puertos de los subdominios para detectar servicios abiertos.</li>
+            </ul>
+            <h3>Ejemplo de uso:</h3>
+            <pre><code>python3 domainSecurityScan.py -u https://ejemplo.com > result.txt</code></pre>
+        </section>
+        
+        <!-- Continúa con los otros scripts -->
+        
+        <section>
+            <h2>FavIconShondanToCF.py</h2>
+            <p>Este script está diseñado para realizar varias tareas relacionadas con la verificación y análisis de una URL específica. Sus funciones incluyen:</p>
+            <ul>
+                <li>Verificación de la validez de una URL proporcionada.</li>
+                <li>Descarga del favicon (ícono) del sitio web de la URL.</li>
+                <li>Codificación del favicon en base64 y cálculo de su hash utilizando MurmurHash3.</li>
+                <li>Búsqueda en Shodan utilizando el hash del favicon para encontrar otros servicios web que utilicen el mismo favicon.</li>
+            </ul>
+            <h3>¿Cómo usar el script?</h3>
+            <ul>
+                <li>Asegúrate de que todas las dependencias estén instaladas: <code>pip install requests mmh3 shodan</code></li>
+                <li>Verifica que la clave API de Shodan (SHODAN_API_KEY) en el script sea válida y activa.</li>
+                <li>Configura el proxy en el script si es necesario. Si no estás detrás de un proxy, comenta o elimina las líneas relevantes.</li>
+                <li>Guarda el script en tu computadora.</li>
+                <li>Ejecuta el script desde la línea de comandos proporcionando la URL del sitio a verificar: <code>python3 FavIconShondanToCF.py https://web-A-certificar.com</code></li>
+            </ul>
+        </section>
+
+        <!-- Continúa con el resto de scripts -->
+
+    </main>
+</body>
+</html>
