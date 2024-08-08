@@ -7,9 +7,8 @@ body {
     color: #333;
 }
 
-/* Navbar styles */
 .navbar {
-    background-color: #333;
+    background-color: #1e1e2f; /* Color oscuro del navbar */
     padding: 1rem;
 }
 
@@ -30,7 +29,6 @@ body {
     border-radius: 5px;
 }
 
-/* Header styles */
 header {
     background-color: #4a4a4a;
     color: white;
@@ -57,7 +55,6 @@ header p {
     margin: 0;
 }
 
-/* Main content styles */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -95,15 +92,13 @@ a:hover {
     color: #0056b3;
 }
 
-/* Footer styles */
 .custom-footer {
-    background-color: #333;
+    background-color: #1e1e2f; /* Color oscuro del footer */
     color: white;
     padding: 10px 0;
     text-align: center;
 }
 
-/* Additional styles */
 pre, code {
     background-color: #e4e4e4;
     padding: 10px;
@@ -111,4 +106,3 @@ pre, code {
     display: block;
     overflow-x: auto;
 }
-
