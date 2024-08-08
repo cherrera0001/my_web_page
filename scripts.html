@@ -101,7 +101,37 @@
                 </ul>
             </section>
 
-            <!-- Continúa con el resto de scripts -->
+            <section>
+            <h2>RequestSlow.py</h2>
+            <p>Este script está diseñado para realizar pruebas de ataques de DDoS (Denegación de Servicio Distribuido) utilizando diferentes métodos como HTTP, TCP y UDP. Las principales funcionalidades del script incluyen:</p>
+            <ul>
+                <li>Configuración y envío de solicitudes HTTP para mantener vivos los sockets.</li>
+                <li>Realización de inundaciones TCP y UDP para simular ataques de DDoS.</li>
+                <li>Uso de múltiples hilos (threads) para enviar múltiples paquetes simultáneamente.</li>
+                <li>Configuración de intervalos y límites de tasa para las solicitudes HTTP.</li>
+            </ul>
+            <h3>¿Cómo usar el script?</h3>
+            <pre><code>python3 ddos_test.py <ip_objetivo> <puerto_objetivo> --http --tcp --udp --socket_count 100 --thread_count 10 --duration 120 --packet_size 1024 --timer 10 --rate_limit 5</code></pre>
+            <h3>Parámetros que puedes configurar:</h3>
+            <ul>
+                <li><code>ip</code>: Dirección IP del objetivo.</li>
+                <li><code>port</code>: Número de puerto del objetivo.</li>
+                <li><code>--http</code>: Activa el ataque de inundación HTTP.</li>
+                <li><code>--tcp</code>: Activa el ataque de inundación TCP.</li>
+                <li><code>--udp</code>: Activa el ataque de inundación UDP.</li>
+                <li><code>--socket_count</code>: Número de sockets a usar para la inundación HTTP.</li>
+                <li><code>--thread_count</code>: Número de hilos para la inundación TCP/UDP.</li>
+                <li><code>--duration</code>: Duración de la inundación TCP/UDP en segundos.</li>
+                <li><code>--packet_size</code>: Tamaño de los paquetes TCP/UDP en bytes.</li>
+                <li><code>--timer</code>: Intervalo en segundos entre señales de keep-alive.</li>
+                <li><code>--rate_limit</code>: Límite de tasa para las solicitudes HTTP por segundo.</li>
+            </ul>
+            <h3>Notas importantes:</h3>
+            <ul>
+                <li>Este script es solo para fines educativos y de prueba en entornos controlados y con el consentimiento del propietario del objetivo. El uso indebido de este script para realizar ataques de DDoS en sistemas no autorizados es ilegal.</li>
+            </ul>
+        </section>
+
 
         </main>
     </div>
