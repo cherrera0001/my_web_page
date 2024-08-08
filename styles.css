@@ -7,9 +7,22 @@ body {
     color: #333;
 }
 
+/* Navbar styles */
+.navbar {
+    background-color: #333;
+    padding: 1rem;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 .navbar-nav .nav-item .nav-link {
     color: #fff !important;
     font-weight: bold;
+    margin: 0 0.5rem;
 }
 
 .navbar-nav .nav-item .nav-link:hover {
@@ -17,11 +30,48 @@ body {
     border-radius: 5px;
 }
 
-.custom-footer {
-    background-color: #333;
+/* Header styles */
+header {
+    background-color: #4a4a4a;
     color: white;
-    padding: 10px 0;
     text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+header img {
+    max-width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Main content styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section h2 {
+    color: #007BFF;
+    font-size: 1.8rem;
+}
+
+section h3 {
+    color: #0056b3;
+    font-size: 1.5rem;
 }
 
 ul {
@@ -37,10 +87,28 @@ ul li {
 }
 
 a {
-    color: #333;
+    color: #007BFF;
     text-decoration: none;
 }
 
 a:hover {
-    color: #007BFF;
+    color: #0056b3;
 }
+
+/* Footer styles */
+.custom-footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Additional styles */
+pre, code {
+    background-color: #e4e4e4;
+    padding: 10px;
+    border-radius: 5px;
+    display: block;
+    overflow-x: auto;
+}
+
