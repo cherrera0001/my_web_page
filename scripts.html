@@ -159,31 +159,20 @@
         <p>&copy; 2024 Cristóbal Herrera. Todos los derechos reservados.</p>
     </footer>
 <!-- Script para alternar entre temas -->
-    <script>
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const body = document.body;
-
-        // Verifica si hay una preferencia de tema guardada en localStorage
-        const currentTheme = localStorage.getItem('theme');
-        if (currentTheme) {
-            body.classList.add(currentTheme);
-        } else {
-            // Establecer el tema claro por defecto si no hay uno guardado
-            body.classList.add('light-theme');
-        }
-
-        themeToggleBtn.addEventListener('click', function() {
-            body.classList.toggle('dark-theme');
-            body.classList.toggle('light-theme');
-
-            // Guardar la preferencia de tema en localStorage
-            let theme = 'light-theme';
-            if (body.classList.contains('dark-theme')) {
-                theme = 'dark-theme';
-            }
-            localStorage.setItem('theme', theme);
-        });
-    </script>
+     <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const toggleButton = document.getElementById('theme-toggle');
+                const currentTheme = localStorage.getItem('theme') || 'light';
+        
+                document.body.dataset.theme = currentTheme;
+        
+                toggleButton.addEventListener('click', () => {
+                    const newTheme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
+                    document.body.dataset.theme = newTheme;
+                    localStorage.setItem('theme', newTheme); // Guarda el tema seleccionado
+                });
+            });
+      </script> 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
