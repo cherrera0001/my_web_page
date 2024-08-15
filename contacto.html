@@ -65,19 +65,19 @@
         });
    </script> -->
     <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const toggleButton = document.getElementById('theme-toggle');
-        const currentTheme = localStorage.getItem('theme') || 'light';
-
-        document.body.dataset.theme = currentTheme;
-
-        toggleButton.addEventListener('click', () => {
-            const newTheme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
-            document.body.dataset.theme = newTheme;
-            localStorage.setItem('theme', newTheme); // Guarda el tema seleccionado
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleButton = document.getElementById('theme-toggle');
+            const currentTheme = localStorage.getItem('theme') || 'light';
+    
+            document.body.dataset.theme = currentTheme;
+    
+            toggleButton.addEventListener('click', () => {
+                const newTheme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.body.dataset.theme = newTheme;
+                localStorage.setItem('theme', newTheme); // Guarda el tema seleccionado
+            });
         });
-    });
-</script
+    </script
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
