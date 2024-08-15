@@ -140,5 +140,28 @@
     <!-- Cloudflare Web Analytics -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fa052347ee274b14afeec28eafc1b6b8"}'></script>
     <!-- End Cloudflare Web Analytics -->
+    <script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Verifica si hay una preferencia de tema guardada en localStorage
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme) {
+        body.classList.add(currentTheme);
+    }
+
+    themeToggleBtn.addEventListener('click', function() {
+        body.classList.toggle('dark-theme');
+        body.classList.toggle('light-theme');
+
+        // Guardar la preferencia de tema en localStorage
+        let theme = 'light-theme';
+        if (body.classList.contains('dark-theme')) {
+            theme = 'dark-theme';
+        }
+        localStorage.setItem('theme', theme);
+    });
+</script>
+
 </body>
 </html>
