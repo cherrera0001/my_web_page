@@ -92,12 +92,18 @@ button {
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Añadir transición suave */
 }
 
 button:hover {
     background-color: var(--button-hover-background-light);
     color: var(--button-hover-text-color-light);
+}
+
+button:active {
+    background-color: var(--button-hover-background-light);
+    color: var(--button-hover-text-color-light);
+    transform: scale(0.98); /* Efecto de "presionar" el botón */
 }
 
 body.dark-mode {
