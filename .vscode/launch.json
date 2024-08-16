@@ -8,7 +8,7 @@
             "type": "msedge",
             "request": "launch",
             "name": "Open scripts.html",
-            "file": "d:\\C4A\\Dev\\my_web_page\\index.html"
+            "file": "d:\\C4A\\Dev\\my_web_page\\pages\\index.html"
         }
     ]
 }

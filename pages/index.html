@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cristóbal Herrera - Ethical Hacker y Docente</title>
+    <title>About</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.min.css"> <!-- Versión minificada del CSS -->
-    <link rel="icon" href="no_fa.png" sizes="48x48" type="image/png">
+    <link rel="stylesheet" href="../assets/css/styles.min.css"> 
+    <link rel="icon" href="../assets/img/no_fa.png" sizes="48x48" type="image/png">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -35,13 +35,13 @@
     </nav>
     <div class="container">
         <header class="mt-4">
-            <h1 class="display-4">¡Bienvenido, soy Cristóbal Herrera!</h1>
-            <p class="lead">Ethical Hacker y Docente con más de 12 años de experiencia.</p>
+            <h1>¡Bienvenido, soy Cristóbal Herrera!</h1>
+            <p>Ethical Hacker y Docente con más de 12 años de experiencia laboral.</p>
             <hr class="my-4">
         </header>
         <section class="bio mb-5">
             <h2>Sobre mí</h2>
-            <p>Con 12+ años de experiencia laboral, Diplomado en Redteam, Gobernanza, Gestión y Auditoría de Ciberseguridad, y habilidades como hacker ético. Soy titulado en Ingeniería en Informática y he trabajado en diferentes sectores, como gobierno, banca y financieras, retail, industria de alimentos y construcción. Mi experiencia incluye trabajar como consultor de Integración, QA, certificador de aplicaciones webs, móviles, apis, POS y plataformas IVR, ethical hacking y Pentesting, evaluaciones de seguridad, auditorías tecnológicas, y docencia en áreas TIC. Soy certificado en Ethical Hacking y Pentest CHP, Líder Auditor ISO 27001, Gobierno y Gestión usando COBIT, Gobierno y Gestión usando NIST, Implementador ISO 27.001. Actualmente trabajo como Hacker ético para un importante holding nacional.</p>
+            <p>Diplomado en Redteam, Gobernanza, Gestión y Auditoría de Ciberseguridad, y habilidades como hacker ético. Soy titulado en Ingeniería en Informática y he trabajado en diferentes sectores, como gobierno, banca y financieras, retail, industria de alimentos y construcción. Mi experiencia incluye trabajar como consultor de Integración, QA, certificador de aplicaciones webs, móviles, apis, POS y plataformas IVR, ethical hacking y Pentesting, evaluaciones de seguridad, auditorías tecnológicas, y docencia en áreas TIC. Soy certificado en Ethical Hacking y Pentest CHP, Líder Auditor ISO 27001, Gobierno y Gestión usando COBIT, Gobierno y Gestión usando NIST, Implementador ISO 27.001. Actualmente trabajo como Hacker ético para un importante holding nacional.</p>
             <p>GH: <a href="https://github.com/cherrera0001/ScriptsPython" target="_blank">https://github.com/cherrera0001/ScriptsPython</a></p>
             <p>Credly: <a href="https://www.credly.com/users/cherrera0001" target="_blank">https://www.credly.com/users/cherrera0001</a></p>
         </section>
@@ -80,24 +80,10 @@
     <footer class="custom-footer">
         <p>&copy; 2024 Cristóbal Herrera. Todos los derechos reservados.</p>
     </footer>
-
+    <script defer src="../assets/js/theme.js"></script>
+    <script defer src="../assets/js/main.js"></script>
     <script defer src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const toggleButton = document.getElementById('theme-toggle');
-            const currentTheme = localStorage.getItem('theme') || 'light';
-                document.body.dataset.theme = currentTheme;
-                toggleButton.addEventListener('click', () => {
-                const newTheme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
-                document.body.dataset.theme = newTheme;
-                localStorage.setItem('theme', newTheme); // Guarda el tema seleccionado
-            });
-        });
-    </script>
-    <!-- Cloudflare Web Analytics -->
-    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fa052347ee274b14afeec28eafc1b6b8"}'></script>
-    <!-- End Cloudflare Web Analytics -->
 </body>
 </html>
