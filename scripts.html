@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mis Scripts</title>
+    <title>Mis Scripts - Cristóbal Herrera</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.min.css"> <!-- Versión minificada del CSS -->
+    <link rel="icon" href="no_fa.png" sizes="48x48" type="image/png">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -26,8 +27,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="contacto.html">Contacto</a>
                 </li>
-                </li>
-                    <li class="nav-item"><button id="theme-toggle" class="btn btn-primary">Cambiar Tema</button>
+                <li class="nav-item">
+                    <button id="theme-toggle" class="btn btn-secondary">Cambiar Tema</button>
                 </li>
             </ul>        
         </div>
@@ -36,11 +37,12 @@
     <div class="container">
         <header class="mt-4">
             <h1>Scripts Python</h1>
-            <p>En este repositorio iré dejando diversos scripts que pueden ser de utilidad de todos.</p>
+            <p>En este repositorio iré dejando diversos scripts que pueden ser de utilidad para todos.</p>
             <h3>Enlace al repositorio:</h3>
             <a href="https://github.com/cherrera0001/ScriptsPython" target="_blank">Ver repositorio en GitHub</a>
         </header>
         <main>
+            <!-- FaviconFrenzy.py -->
             <section class="mb-5">
                 <h2>FaviconFrenzy.py</h2>
                 <p>FaviconFrenzy es un script en Python diseñado para buscar el favicon de una URL proporcionada, calcular su hash y enviarlo a Shodan para su análisis. Además, el script puede descubrir la dirección IP real detrás de servicios de protección como Cloudflare.</p>
@@ -60,21 +62,11 @@
                 <pre><code>pip install requests beautifulsoup4 pillow mmh3 shodan dnspython</code></pre>
                 <h3>Ejemplo de Uso:</h3>
                 <pre><code>python3 faviconfrenzy.py -u https://ejemplo.com -ak TU_CLAVE_SHODAN</code></pre>
-                <h3>Requisitos:</h3>
-                <pre><code>pip install requests mmh3 shodan dnspython</code></pre>
-                <h3>Notas:</h3>
-                <ul>
-                    <li>Asegúrate de tener una clave API de Shodan válida.</li>
-                    <li>El script intenta resolver la IP real del dominio utilizando consultas DNS, lo cual puede no siempre ser exitoso dependiendo de las configuraciones del DNS y servicios de protección como Cloudflare.</li>
-                </ul>
                 <h3>Enlace al script:</h3>
-                <ul>
-                    <a href="https://github.com/cherrera0001/ScriptsPython/blob/main/FaviconFrenzy.py" target="_blank">Ver FaviconFrenzy.py en GitHub</a>
-                </ul>
+                <a href="https://github.com/cherrera0001/ScriptsPython/blob/main/FaviconFrenzy.py" target="_blank">Ver FaviconFrenzy.py en GitHub</a>
             </section>
 
-            <!-- Repite la estructura anterior para cada script -->
-
+            <!-- domainSecurityScan.py -->
             <section class="mb-5">
                 <h2>domainSecurityScan.py</h2>
                 <p>Este script realiza un análisis completo de seguridad para un dominio especificado. Las funcionalidades clave incluyen:</p>
@@ -86,14 +78,11 @@
                 </ul>
                 <h3>Ejemplo de uso:</h3>
                 <pre><code>python3 domainSecurityScan.py -u https://ejemplo.com > result.txt</code></pre>
-                  <h3>Enlace al script:</h3>
-                <ul>
-                    <a href="https://github.com/cherrera0001/ScriptsPython/blob/main/domainSecurityScan.py" target="_blank">Ver domainSecurityScan.py en GitHub</a>
-                </ul>
+                <h3>Enlace al script:</h3>
+                <a href="https://github.com/cherrera0001/ScriptsPython/blob/main/domainSecurityScan.py" target="_blank">Ver domainSecurityScan.py en GitHub</a>
             </section>
             
-            <!-- Continúa con los otros scripts -->
-            
+            <!-- FavIconShondanToCF.py -->
             <section class="mb-5">
                 <h2>FavIconShondanToCF.py</h2>
                 <p>Este script está diseñado para realizar varias tareas relacionadas con la verificación y análisis de una URL específica. Sus funciones incluyen:</p>
@@ -104,62 +93,33 @@
                     <li>Búsqueda en Shodan utilizando el hash del favicon para encontrar otros servicios web que utilicen el mismo favicon.</li>
                 </ul>
                 <h3>¿Cómo usar el script?</h3>
-                <ul>
-                    <li>Asegúrate de que todas las dependencias estén instaladas: <code>pip install requests mmh3 shodan</code></li>
-                    <li>Verifica que la clave API de Shodan (SHODAN_API_KEY) en el script sea válida y activa.</li>
-                    <li>Configura el proxy en el script si es necesario. Si no estás detrás de un proxy, comenta o elimina las líneas relevantes.</li>
-                    <li>Guarda el script en tu computadora.</li>
-                    <li>Ejecuta el script desde la línea de comandos proporcionando la URL del sitio a verificar: <code>python3 FavIconShondanToCF.py https://web-A-certificar.com</code></li>
-                </ul>
-                  <h3>Enlace al script:</h3>
-                <ul>
-                    <a href="https://github.com/cherrera0001/ScriptsPython/blob/main/FavIconShondanToCF.py" target="_blank">Ver FavIconShondanToCF.py en GitHub</a>
-                </ul>
+                <pre><code>python3 FavIconShondanToCF.py https://web-A-certificar.com</code></pre>
+                <h3>Enlace al script:</h3>
+                <a href="https://github.com/cherrera0001/ScriptsPython/blob/main/FavIconShondanToCF.py" target="_blank">Ver FavIconShondanToCF.py en GitHub</a>
             </section>
-
-            <section>
-            <h2>RequestSlow.py</h2>
-            <p>Este script está diseñado para realizar pruebas de ataques de DDoS (Denegación de Servicio Distribuido) utilizando diferentes métodos como HTTP, TCP y UDP. Las principales funcionalidades del script incluyen:</p>
-            <ul>
-                <li>Configuración y envío de solicitudes HTTP para mantener vivos los sockets.</li>
-                <li>Realización de inundaciones TCP y UDP para simular ataques de DDoS.</li>
-                <li>Uso de múltiples hilos (threads) para enviar múltiples paquetes simultáneamente.</li>
-                <li>Configuración de intervalos y límites de tasa para las solicitudes HTTP.</li>
-            </ul>
-            <h3>¿Cómo usar el script?</h3>
-            <pre><code>python3 ddos_test.py <ip_objetivo> <puerto_objetivo> --http --tcp --udp --socket_count 100 --thread_count 10 --duration 120 --packet_size 1024 --timer 10 --rate_limit 5</code></pre>
-            <h3>Parámetros que puedes configurar:</h3>
-            <ul>
-                <li><code>ip</code>: Dirección IP del objetivo.</li>
-                <li><code>port</code>: Número de puerto del objetivo.</li>
-                <li><code>--http</code>: Activa el ataque de inundación HTTP.</li>
-                <li><code>--tcp</code>: Activa el ataque de inundación TCP.</li>
-                <li><code>--udp</code>: Activa el ataque de inundación UDP.</li>
-                <li><code>--socket_count</code>: Número de sockets a usar para la inundación HTTP.</li>
-                <li><code>--thread_count</code>: Número de hilos para la inundación TCP/UDP.</li>
-                <li><code>--duration</code>: Duración de la inundación TCP/UDP en segundos.</li>
-                <li><code>--packet_size</code>: Tamaño de los paquetes TCP/UDP en bytes.</li>
-                <li><code>--timer</code>: Intervalo en segundos entre señales de keep-alive.</li>
-                <li><code>--rate_limit</code>: Límite de tasa para las solicitudes HTTP por segundo.</li>
-            </ul>
-            <h3>Notas importantes:</h3>
-            <ul>
+            <!-- FavIconShondanToCF.py -->
+            <section class="mb-5"></section>
+             <h3>Disclaimer:</h3>
+             <ul>
                 <li>Este script es solo para fines educativos y de prueba en entornos controlados y con el consentimiento del propietario del objetivo. El uso indebido de este script para realizar ataques de DDoS en sistemas no autorizados es ilegal.</li>
-            </ul>
-                  <h3>Enlace al script:</h3>
-            <ul>
+             </ul>
+            <!-- RequestSlow.py -->
+            <section class="mb-5">
+                <h2>RequestSlow.py</h2>
+                <p>Este script está diseñado para realizar pruebas de ataques de DDoS (Denegación de Servicio Distribuido) utilizando diferentes métodos como HTTP, TCP y UDP.</p>
+                <h3>Ejemplo de uso:</h3>
+                <pre><code>python3 ddos_test.py <ip_objetivo> <puerto_objetivo> --http --tcp --udp --socket_count 100 --thread_count 10 --duration 120 --packet_size 1024 --timer 10 --rate_limit 5</code></pre>
+                <h3>Enlace al script:</h3>
                 <a href="https://github.com/cherrera0001/ScriptsPython/blob/main/RequestSlow.py" target="_blank">Ver RequestSlow.py en GitHub</a>
-            </ul>
-        </section>
-
-
+            </section>
         </main>
     </div>
 
     <footer class="custom-footer">
         <p>&copy; 2024 Cristóbal Herrera. Todos los derechos reservados.</p>
     </footer>
-<!-- Script para alternar entre temas -->
+
+    <!-- Script para alternar entre temas -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const toggleButton = document.getElementById('theme-toggle');
@@ -174,9 +134,10 @@
             });
         });
     </script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script defer src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Cloudflare Web Analytics -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fa052347ee274b14afeec28eafc1b6b8"}'></script>
     <!-- End Cloudflare Web Analytics -->

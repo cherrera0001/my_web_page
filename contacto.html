@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto - Cristóbal Herrera</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.min.css"> <!-- Versión minificada del CSS -->
+  <link rel="icon" href="no_fa.png" sizes="48x48" type="image/png">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <!-- Se añadió esta línea -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Cristóbal Herrera</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
     </button>
@@ -21,22 +23,21 @@
           <a class="nav-link" href="proyectos.html">Proyectos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="scripts.html">Scripts</a>
+          <a class="nav-link" href="scripts.html">Scripts</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="contacto.html">Contacto</a>
         </li>
-        <li class="nav-link active">
+        <li class="nav-item">
           <button id="theme-toggle" class="btn btn-primary">Cambiar Tema</button>
         </li>
       </ul>
     </div>
   </nav>
-  <div class="container">
-    <div class="jumbotron mt-4">
-      <h1 class="display-4">Contacto</h1>
-      <p class="lead">Puedes contactarme a través de los siguientes medios:</p>
-    </div>
+  <header class="mt-4">
+      <h1>Contacto</h1>
+      <p>Puedes contactarme a través de los siguientes medios:</p>
+  </header>
     <section class="contact mb-5">
       <h2>Contacto</h2>
       <p>Email: <a href="mailto:crherrera@c4a.cl">crherrera@c4a.cl</a></p>
@@ -47,22 +48,21 @@
   <footer class="custom-footer">
     <p>© 2024 Cristóbal Herrera. Todos los derechos reservados.</p>
   </footer>
+  <script defer src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
   <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const toggleButton = document.getElementById('theme-toggle');
-            const currentTheme = localStorage.getItem('theme') || 'light';
-    
-            document.body.dataset.theme = currentTheme;
-    
-            toggleButton.addEventListener('click', () => {
-                const newTheme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
-                document.body.dataset.theme = newTheme;
-                localStorage.setItem('theme', newTheme); // Guarda el tema seleccionado
-            });
-        });
-    </script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script> 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+      document.addEventListener('DOMContentLoaded', () => {
+          const toggleButton = document.getElementById('theme-toggle');
+          const currentTheme = localStorage.getItem('theme') || 'light';
+          document.body.dataset.theme = currentTheme;
+          toggleButton.addEventListener('click', () => {
+              const newTheme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
+              document.body.dataset.theme = newTheme;
+              localStorage.setItem('theme', newTheme); // Guarda el tema seleccionado
+          });
+      });
+  </script>
   <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fa052347ee274b14afeec28eafc1b6b8"}'></script>
 </body>
 </html>
