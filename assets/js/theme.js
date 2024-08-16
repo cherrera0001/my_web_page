@@ -3,10 +3,16 @@
 document.addEventListener('DOMContentLoaded', () => {
     const toggleButton = document.getElementById('theme-toggle');
     const currentTheme = localStorage.getItem('theme') || 'light';
-    document.body.dataset.theme = currentTheme;
+    
+    // Aplica el tema actual almacenado en localStorage
+    document.body.classList.toggle('dark-mode', currentTheme === 'dark');
+    
     toggleButton.addEventListener('click', () => {
-        const newTheme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
-        document.body.dataset.theme = newTheme;
-        localStorage.setItem('theme', newTheme); // Guarda el tema seleccionado
+        // Cambia el tema
+        const newTheme = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
+        document.body.classList.toggle('dark-mode', newTheme === 'dark');
+        
+        // Guarda el tema en localStorage
+        localStorage.setItem('theme', newTheme);
     });
 });
