@@ -10,10 +10,43 @@
 </head>
 <body>
   <div class="container-fluid">
-    <div class="row">
-      <!-- Include Navbar -->
-      <div id="navbar-placeholder"></div>
-    </div>
+    <nav class="col-md-3 col-lg-2 d-md-block bg-dark sidebar">
+      <div class="sidebar-sticky">
+          <div class="accordion" id="accordionExample">
+              <div class="card bg-dark">
+                  <div class="card-header" id="headingOne">
+                      <h2 class="mb-0">
+                          <button class="btn btn-link text-white" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              Menú
+                          </button>
+                      </h2>
+                  </div>
+  
+                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                      <div class="card-body">
+                          <ul class="nav flex-column">
+                              <li class="nav-item">
+                                  <a class="nav-link" href="about.html">Inicio</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link" href="proyectos.html">Proyectos</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link" href="scripts.html">Scripts</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link" href="contacto.html">Contacto</a>
+                              </li>
+                              <li class="nav-item">
+                                  <button id="theme-toggle" class="btn btn-secondary">Cambiar modo</button>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </nav>
 
     <div class="container">
       <div class="header-image">
@@ -31,8 +64,11 @@
       </section>
     </div>
 
-    <!-- Include Footer -->
-    <div id="footer-placeholder"></div>
+    <footer class="footer mt-auto py-3 bg-dark text-white">
+      <div class="container">
+          <span class="text-muted">© 2024 Cristóbal Herrera. Todos los derechos reservados.</span>
+      </div>
+    </footer>
 
     <script defer src="../assets/js/theme.js"></script>
     <script defer src="../assets/js/main.js"></script>
