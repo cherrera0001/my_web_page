@@ -2,11 +2,50 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=pages/about.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redireccionando...</title>
+    <title>Redirigiendo...</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url('../assets/img/background.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <p>Si no eres redirigido automáticamente, sigue este <a href="pages/about.html">enlace</a>.</p>
+    <div>
+        <p>Si no eres redirigido automáticamente, sigue este botón:</p>
+        <button onclick="window.location.href='pages/about.html'">Ir a About</button>
+    </div>
+
+    <script>
+        // Redirigir automáticamente después de 5 segundos
+        setTimeout(() => {
+            window.location.href = 'pages/about.html';
+        }, 5000);
+    </script>
 </body>
 </html>
